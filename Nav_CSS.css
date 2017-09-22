@@ -1,0 +1,41 @@
+body {
+    font-family: Raleway, Monaco, monospace;
+    text-align: center;
+    background-color: grey;
+}
+
+a {
+    padding: 20px;
+    margin: 0;
+    background-color: white;
+    text-decoration: none;
+    border: solid;
+    border-color: blue;
+    transition: color 0.2s;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+a:hover {
+    color: white;
+    z-index: 1;
+}
+a::after {
+    position: absolute;
+    content: no-close-quote ;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    background-color: darkgrey;
+    transition:width 0.2s ease;
+    z-index: -1;
+}
+a:hover::after {
+    width: 100%;
+}
+.active {
+    background-color: limegreen;
+    color: white;
+}
